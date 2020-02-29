@@ -28,7 +28,9 @@
     },
     "android": {
       "package": "com.giffybois.litbit",
-      "versionCode": 1
+      "versionCode": 1,
+      "permissions": [],
+      "icon": "./assets/icon.png"
     }
   }
 }
