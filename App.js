@@ -1,12 +1,12 @@
 import React from 'react';
 import { StyleSheet, View } from 'react-native';
 
-
-import { Francis } from './codeBOIS';
+import { Francis, Parth } from './codeBOIS';
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <Parth />
       <Francis />
     </View>
   );
