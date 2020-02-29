@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { View, Text, Button, StyleSheet } from 'react-native';
 
+import * as Speech from 'expo-speech';
+
 import { Pedometer } from 'expo-sensors';
 
 const styles = StyleSheet.create({
     root: {
         textAlign: 'center',
-        // backgroundColor: 'blue',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
@@ -24,9 +25,12 @@ const styles = StyleSheet.create({
 
 const CountDisplay = ({
     count = 0,
+    playSound = () => { },
     ...other
 }) => {
     console.log('count display:', count);
+    playSound();
+    Speech.speak(`${count}`);
     return (
         <View style={styles.root}>
             <Text style={styles.count}>
@@ -40,6 +44,7 @@ const CountDisplay = ({
 }
 
 const Work = ({
+    playSound = () => { },
     ...props
 }) => {
 
@@ -54,7 +59,7 @@ const Work = ({
 
     return (
         <View>
-            <CountDisplay count={count} />
+            <CountDisplay count={count} playSound={playSound} />
         </View>
     )
 

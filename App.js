@@ -9,30 +9,30 @@ export default function App() {
 
   useEffect(() => {
     playSound();
-}, [selectedSoundEffect])
+  }, [selectedSoundEffect])
 
-const onSoundEffectSelected = itemValue => {
+  const onSoundEffectSelected = itemValue => {
     setSelectedSoundEffect(itemValue);
-}
+  }
 
-const playSound =  () => {
+  const playSound = () => {
     try {
-        Audio.Sound.createAsync(
-          selectedSoundEffect.sound,
-          { shouldPlay: true }
-        ).then((sound, status) => {
-            
-        });
-        // Your sound is playing!
-      } catch (error) {
-        // An error occurred!
-      }
-}
+      Audio.Sound.createAsync(
+        selectedSoundEffect.sound,
+        { shouldPlay: true }
+      ).then((sound, status) => {
+
+      });
+      // Your sound is playing!
+    } catch (error) {
+      // An error occurred!
+    }
+  }
 
   return (
     <View style={styles.container}>
-      <Parth selectedSoundEffect={selectedSoundEffect} setSelectedSoundEffect={setSelectedSoundEffect} onSoundEffectSelected={onSoundEffectSelected}/>
-      <Francis />
+      <Parth selectedSoundEffect={selectedSoundEffect} setSelectedSoundEffect={setSelectedSoundEffect} onSoundEffectSelected={onSoundEffectSelected} />
+      <Francis playSound={playSound} />
     </View>
   );
 }
