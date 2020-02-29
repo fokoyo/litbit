@@ -26,11 +26,16 @@ const styles = StyleSheet.create({
 const CountDisplay = ({
     count = 0,
     playSound = () => { },
+    selectedSoundEffect = {},
     ...other
 }) => {
     console.log('count display:', count);
-    playSound();
-    Speech.speak(`${count}`);
+
+    if (selectedSoundEffect.value === 'count-out-loud')
+        Speech.speak(`${count}`);
+    else
+        playSound();
+
     return (
         <View style={styles.root}>
             <Text style={styles.count}>
@@ -45,6 +50,7 @@ const CountDisplay = ({
 
 const Work = ({
     playSound = () => { },
+    selectedSoundEffect = {},
     ...props
 }) => {
 
@@ -59,7 +65,7 @@ const Work = ({
 
     return (
         <View>
-            <CountDisplay count={count} playSound={playSound} />
+            <CountDisplay count={count} playSound={playSound} selectedSoundEffect={selectedSoundEffect} />
         </View>
     )
 

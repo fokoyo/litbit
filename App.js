@@ -5,7 +5,11 @@ import { Audio } from "expo-av";
 import { Francis, Parth } from './codeBOIS';
 
 export default function App() {
-  const [selectedSoundEffect, setSelectedSoundEffect] = useState({});
+  const [selectedSoundEffect, setSelectedSoundEffect] = useState({
+    label: 'Count Out Loud',
+    value: 'count-out-loud',
+    sound: null
+  });
 
   useEffect(() => {
     playSound();
