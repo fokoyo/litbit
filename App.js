@@ -40,7 +40,7 @@ const playSound =  () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: '#F09D51',
     alignItems: 'center',
     justifyContent: 'center',
   },
