@@ -27,7 +27,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.giffybois.litbit",
+      "package": "com.jiffybois.litbit",
       "versionCode": 1,
       "permissions": [],
       "icon": "./assets/icon.png"
