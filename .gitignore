@@ -108,3 +108,7 @@ dist
 
 .expo-shared
 my-release-key.keystore
+
+
+android/
+ios/
