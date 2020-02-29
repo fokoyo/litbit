@@ -59,3 +59,5 @@ buck-out/
 ios/
 android/
 .expo/
+.expo-shared
+my-release-key.keystore
