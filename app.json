@@ -27,7 +27,7 @@
       "supportsTablet": true
     },
     "android": {
-      "package": "com.litbit",
+      "package": "com.giffybois.litbit",
       "versionCode": 1
     }
   }
