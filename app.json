@@ -24,10 +24,12 @@
       "**/*"
     ],
     "ios": {
+      "bundleIdentifier": "io.jiffybois.litbit",
+      "buildNumber": "1.0.0",
       "supportsTablet": true
     },
     "android": {
-      "package": "com.jiffybois.litbit",
+      "package": "io.jiffybois.litbit",
       "versionCode": 1,
       "permissions": [],
       "icon": "./assets/icon.png"
