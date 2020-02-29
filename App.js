@@ -1,51 +1,38 @@
-import React, { useState, useEffect } from 'react';
-import { StyleSheet, View } from 'react-native';
-import { Audio } from "expo-av";
+import React, { Component } from 'react';
+import { Platform, StyleSheet, Text, View } from 'react-native';
 
-import { Francis, Parth } from './codeBOIS';
+const instructions = Platform.select({
+  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
+  android: 'Double tap R on your keyboard to reload,\n' + 'Shake or press menu button for dev menu',
+});
 
-export default function App() {
-  const [selectedSoundEffect, setSelectedSoundEffect] = useState({
-    label: 'Count Out Loud',
-    value: 'count-out-loud',
-    sound: null
-  });
-
-  useEffect(() => {
-    playSound();
-  }, [selectedSoundEffect])
-
-  const onSoundEffectSelected = itemValue => {
-    setSelectedSoundEffect(itemValue);
+export default class App extends Component {
+  render() {
+    return (
+      <View style={styles.container}>
+        <Text style={styles.welcome}>Welcome to React Native!</Text>
+        <Text style={styles.instructions}>To get started, edit App.js</Text>
+        <Text style={styles.instructions}>{instructions}</Text>
+      </View>
+    );
   }
-
-  const playSound = () => {
-    try {
-      Audio.Sound.createAsync(
-        selectedSoundEffect.sound,
-        { shouldPlay: true }
-      ).then((sound, status) => {
-
-      });
-      // Your sound is playing!
-    } catch (error) {
-      // An error occurred!
-    }
-  }
-
-  return (
-    <View style={styles.container}>
-      <Parth selectedSoundEffect={selectedSoundEffect} setSelectedSoundEffect={setSelectedSoundEffect} onSoundEffectSelected={onSoundEffectSelected} />
-      <Francis playSound={playSound} selectedSoundEffect={selectedSoundEffect} />
-    </View>
-  );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#F09D51',
-    alignItems: 'center',
     justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
   },
 });
