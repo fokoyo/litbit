@@ -1,6 +1,4 @@
 export {default as Francis} from './francis';
-
-import Work from './parth'
-
-
-export {Work as Parth}
+export {default as Parth} from './parth';
+export {default as Colin} from './colin';
+export {default as Steve} from './steve';
