@@ -32,7 +32,7 @@ export default function App() {
   return (
     <View style={styles.container}>
       <Parth selectedSoundEffect={selectedSoundEffect} setSelectedSoundEffect={setSelectedSoundEffect} onSoundEffectSelected={onSoundEffectSelected} />
-      <Francis playSound={playSound} />
+      <Francis playSound={playSound} selectedSoundEffect={selectedSoundEffect} />
     </View>
   );
 }

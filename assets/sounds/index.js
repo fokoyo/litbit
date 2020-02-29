@@ -12,6 +12,7 @@ import FOOT_DRAGGER from './foot-dragger.mp3';
 import RUBBER_DUCK from './rubber-duck.mp3';
 
  const sounds = [
+    {label: 'Count Out Loud', value: 'count-out-loud', sound: RUBBER_DUCK},
     {label: 'Chimpanzee', value: 'chimpanzee', sound: CHIMPANZEE,},
     {label: 'Dry Cough', value: 'dry-cough', sound: DRY_COUGH},
     {label: 'Hitmarker', value: 'hitmarker', sound: HITMARKER},
