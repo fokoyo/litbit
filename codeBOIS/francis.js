@@ -15,10 +15,10 @@ const styles = StyleSheet.create({
     },
     count: {
         fontWeight: 'bold',
-        fontSize: 150
+        fontSize: 1500
     },
     count_text: {
-        fontSize: 50
+        fontSize: 500
     }
 });
 
